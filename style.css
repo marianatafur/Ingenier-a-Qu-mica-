@@ -1,1 +1,36 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
 
+.trimestre {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+}
+
+.materia {
+    background-color: #ffc0cb; /* Rosado para no aprobadas */
+    padding: 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.materia.aprobada {
+    background-color: #800000; /* Vinotinto */
+    color: white;
+    text-decoration: line-through;
+}
+
+.materia.bloqueada {
+    background-color: #a9a9a9; /* Gris para bloqueadas */
+    cursor: not-allowed;
+}
