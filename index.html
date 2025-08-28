@@ -3,26 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malla Curricular Interactiva</title>
+    <title>Malla Interactiva - Ingeniería Química UNIMET</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Mi Malla Curricular</h1>
+    <h1>Malla Curricular Interactiva - Ingeniería Química</h1>
+    [cite_start]<p>Basado en el flujograma aprobado el 07/11/2024. [cite: 4]</p>
+    <div class="aviso">
+        <strong>Nota:</strong> Las materias con prerrequisitos basados en créditos (ej. "150 créd.") están bloqueadas por defecto. Como el sistema no puede contar créditos, deberás desbloquearlas manualmente si cumples el requisito, editando el archivo HTML y eliminando la clase <code>bloqueada</code> de esa materia.
+    </div>
 
     <div class="trimestre">
         <h2>Trimestre I</h2>
-        <div class="materia" id="mate1">Matemática I</div>
-        <div class="materia prerequisito" id="fisica1">Física I</div>
-        <div class="materia" id="quimica1">Química I</div>
+        <div class="materia" id="FBTMM01">Matemática Básica</div>
+        <div class="materia" id="FBTSP03">Introducción a la Ingeniería</div>
+        <div class="materia" id="FBTSP04">Pensamiento Computacional</div>
+        <div class="materia" id="FBTEM01">Competencias para Emprender</div>
     </div>
 
     <div class="trimestre">
         <h2>Trimestre II</h2>
-        <div class="materia bloqueada" id="mate2" data-requisito="mate1">Matemática II</div>
-        <div class="materia bloqueada" id="fisica2" data-requisito="fisica1">Física II</div>
-        <div class="materia" id="prog1">Programación I</div>
+        <div class="materia bloqueada" id="BPTM101" data-requisito="FBTMM01">Matemáticas I</div>
+        <div class="materia bloqueada" id="BPTFI01" data-requisito="FBTMM01">Física I</div>
+        <div class="materia" id="BPTQ121">Química General I</div>
+        <div class="materia" id="FBTL114">Inglés IV</div>
     </div>
+
+    <div class="trimestre">
+        <h2>Trimestre III</h2>
+        <div class="materia bloqueada" id="BPTM102" data-requisito="BPTM101">Matemáticas II</div>
+        <div class="materia bloqueada" id="BPTF102" data-requisito="BPTFI01, BPTM102">Física II</div>
+        <div class="materia bloqueada" id="BPTSP05" data-requisito="FBTSP04">Algoritmos y Programación</div>
+        <div class="materia bloqueada" id="BPTQ123" data-requisito="BPTQ121">Química General II</div>
+        <div class="materia bloqueada" id="BPTQ122" data-requisito="BPTQ121">Laboratorio de Química General I</div>
+        <div class="materia bloqueada" id="FBTL115" data-requisito="FBTL114">Inglés V</div>
+    </div>
+
+    <div class="trimestre">
+        <h2>Trimestre IV</h2>
+        <div class="materia bloqueada" id="BPTM103" data-requisito="BPTM102">Matemáticas III</div>
+        <div class="materia bloqueada" id="BPTF103" data-requisito="BPTF102">Física III</div>
+        <div class="materia bloqueada" id="BPTEN02" data-requisito="BPTQ121">Termodinámica I</div>
+        <div class="materia bloqueada" id="BPTEN16" data-requisito="BPTSP05, BPTM102">Métodos Numéricos para Ing. Química</div>
+        <div class="materia bloqueada" id="BPTQ111" data-requisito="BPTQ123">Química Orgánica I</div>
+        <div class="materia bloqueada" id="BPTQ101" data-requisito="BPTQ123, BPTQ122">Laboratorio de Química General II</div>
+        <div class="materia" id="FBTHE11">Venezuela: Identidad y Contexto</div>
+    </div>
+
+    <div class="trimestre">
+        <h2>Trimestre V</h2>
+        <div class="materia bloqueada" id="BPTM104" data-requisito="BPTM103">Matemáticas IV</div>
+        <div class="materia bloqueada" id="BPTF104" data-requisito="BPTF102">Laboratorio de Física</div>
+        <div class="materia bloqueada" id="BPTEN01" data-requisito="BPTEN02, BPTQ121">Balances de Masa y Energía I</div>
+        <div class="materia bloqueada" id="BPTQ115" data-requisito="BPTQ111">Química Orgánica II</div>
+        <div class="materia" id="FBTHE05">Investigación y Sustentabilidad</div>
+    </div>
+
+    <div class="trimestre">
+        <h2>Trimestre VI</h2>
+        <div class="materia bloqueada" id="BPTM111" data-requisito="BPTM103, BPTM104">Ecuaciones Diferenciales</div>
+        <div class="materia bloqueada" id="BPTEN04" data-requisito="BPTEN01, BPTEN16">Balances de Masa y Energía II</div>
+        <div class="materia bloqueada" id="BPTEN14" data-requisito="BPTM104">Mecánica de Fluidos I</div>
+        <div class="materia bloqueada" id="BPTQ102" data-requisito="BPTQ115, BPTQ101">Laboratorio de Química Orgánica</div>
+        <div class="materia bloqueada" id="BPTP108" data-requisito="BPTQ111">Ciencia e Ingeniería de los Materiales</div>
+        <div class="materia" id="FBTEM02">Ideas Emprendedoras</div>
+    </div>
+
+    <div class="trimestre">
+        <h2>Trimestre VII</h2>
+        <div class="materia bloqueada" id="BPTM105" data-requisito="BPTM104">Matemáticas V</div>
+        <div class="materia bloqueada" id="BPTEN09" data-requisito="BPTEN04">Termodinámica II</div>
+        <div class="materia bloqueada" id="BPTEN13" data-requisito="BPTEN14">Transferencia de Calor</div>
+        <div class="materia bloqueada" id="BPTQ116" data-requisito="BPTF103, BPTEN09">Fisicoquímica</div>
+    </div>
+
+    <div class="trimestre">
+        <h2>Trimestre VIII</h2>
+        <div class="materia bloqueada" id="BPTM106" data-requisito="BPTM103">Estadística para Ingenieros I</div>
+        <div class="materia bloqueada" id="FPTEN16" data-requisito="BPTEN13, BPTEN09">Transferencia de Masa</div>
+        <div class="materia bloqueada" id="FPTEN05" data-requisito="BPTEN13">Laboratorio de Fluidos y Calor</div>
+        <div class="materia bloqueada" id="FPTQ101" data-requisito="BPTQ116">Laboratorio de Fisicoquímica</div>
+    </div>
+    
+    <div class="trimestre">
+        <h2>Trimestre IX</h2>
+        <div class="materia bloqueada" id="BPTP107" data-requisito="creditos">Diseño Asistido por Computador (120 créd.)</div>
+        <div class="materia bloqueada" id="FPTEN08" data-requisito="BPTQ116">Reactores I</div>
+        <div class="materia bloqueada" id="FPTEN17" data-requisito="FPTEN16">Procesos de Separación I</div>
+    </div>
+
+    <div class="trimestre">
+        <h2>Trimestre X</h2>
+        <div class="materia bloqueada" id="FPTEN22" data-requisito="BPTF104, creditos">Instrumentación y Control (120 créd.)</div>
+        <div class="materia bloqueada" id="FPTEN33" data-requisito="FPTEN08">Reactores II</div>
+        <div class="materia bloqueada" id="FPTEN18" data-requisito="FPTEN16">Procesos de Separación II</div>
+        <div class="materia bloqueada" id="FPTPI10" data-requisito="BPTM106, creditos">Aseguramiento de la Calidad (57 créd. BP)</div>
+        <div class="materia bloqueada" id="FPTSP15" data-requisito="creditos">Ingeniería Económica (150 créd.)</div>
+    </div>
+
+    <div class="trimestre">
+        <h2>Trimestre XI</h2>
+        <div class="materia bloqueada" id="FPTSP22" data-requisito="creditos">Taller de Trabajo de Grado (120 créd.)</div>
+        <div class="materia bloqueada" id="FPTEN34" data-requisito="FPTEN22, BPTEN16">Control de Procesos IQ</div>
+        <div class="materia bloqueada" id="FPTEN32" data-requisito="FPTEN08, creditos">Diseño de Procesos Químicos (150 créd.)</div>
+        <div class="materia bloqueada" id="FPTEN20" data-requisito="FPTEN17, FPTEN18">Laboratorio de Ingeniería Química</div>
+        <div class="materia bloqueada" id="FPTSP14" data-requisito="creditos">Proyectos de Ingeniería (150 créd.)</div>
+    </div>
+
+    <div class="trimestre">
+        <h2>Trimestre XII</h2>
+        <div class="materia bloqueada" id="FPTCS16" data-requisito="creditos">Ingeniería Ambiental (150 créd.)</div>
+        <div class="materia bloqueada" id="FPSXX" data-requisito="creditos">Seminario Profesional (150 créd.)</div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>
