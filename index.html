@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <h1>Mi Malla Curricular</h1>
+
+    <div class="trimestre">
+        <h2>Trimestre I</h2>
+        <div class="materia" id="mate1">Matemática I</div>
+        <div class="materia prerequisito" id="fisica1">Física I</div>
+        <div class="materia" id="quimica1">Química I</div>
+    </div>
+
+    <div class="trimestre">
+        <h2>Trimestre II</h2>
+        <div class="materia bloqueada" id="mate2" data-requisito="mate1">Matemática II</div>
+        <div class="materia bloqueada" id="fisica2" data-requisito="fisica1">Física II</div>
+        <div class="materia" id="prog1">Programación I</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
